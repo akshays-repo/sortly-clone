@@ -10,7 +10,7 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "drizzle:generate": "npx drizzle-kit generate",
-    "drizzle:drizzle": "npx drizzle-kit drizzle"
+    "drizzle:migrate": "npx drizzle-kit migrate"
   },
   "dependencies": {
     "@remix-run/node": "^2.9.2",

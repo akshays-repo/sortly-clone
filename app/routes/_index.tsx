@@ -1,7 +1,4 @@
-import type { LoaderArgs } from "@remix-run/node"
 import type { MetaFunction } from "@remix-run/node";
-import { countries } from "~/db/schema";
-import { db } from "~/db/config.server";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,16 +7,8 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-
-
-export async function loader( params: LoaderArgs) {
-  
-  const countires = await db.select().from(countries);
-
-  console.log({countires});
-  
-
-  return {}
+export async function loader() {
+  return {};
 }
 export default function Index() {
   return (
