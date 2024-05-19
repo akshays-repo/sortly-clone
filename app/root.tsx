@@ -10,7 +10,6 @@ import {
 import stylesheet from "~/tailwind.css?url";
 import type { LinksFunction } from "@remix-run/node";
 
-
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -22,14 +21,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
 }
-
-
 
 export default function App() {
   return <Outlet />;
@@ -57,7 +55,6 @@ export function ErrorBoundary() {
     </>
   );
 }
-
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
