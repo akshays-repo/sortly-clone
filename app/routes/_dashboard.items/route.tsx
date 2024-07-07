@@ -8,8 +8,6 @@ import { tasks } from "~/features/items/data/tasks";
 import { cn } from "~/lib/utils";
 import { Layout } from "~/root";
 import { Input } from "@/components/ui/input"
-
-
 import {
   CalendarIcon,
   EnvelopeClosedIcon,
@@ -52,7 +50,7 @@ const Items = () => {
             <Input className="border-b border-none" placeholder="Search folders.." size={20} />
           </div>
         </div>
-        <div className="pt-24 px-2">
+        <div className="px-2 pt-24">
           {numbers.map((number) => (
             <div className="Tag" key={number}>
               <div className="flex hover:bg-gray-200 rounded-[5px] items-center py-1 px-2">
@@ -61,41 +59,40 @@ const Items = () => {
               </div>
             </div>
           ))}
-
         </div>
 
-        {/* <Command className="rounded-lg border shadow-md">
+        {/* <Command className="border rounded-lg shadow-md">
           <CommandInput placeholder="Type a command or search..." />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Suggestions">
               <CommandItem>
-                <CalendarIcon className="mr-2 h-4 w-4" />
+                <CalendarIcon className="w-4 h-4 mr-2" />
                 <span>Calendar</span>
               </CommandItem>
               <CommandItem>
-                <FaceIcon className="mr-2 h-4 w-4" />
+                <FaceIcon className="w-4 h-4 mr-2" />
                 <span>Search Emoji</span>
               </CommandItem>
               <CommandItem>
-                <RocketIcon className="mr-2 h-4 w-4" />
+                <RocketIcon className="w-4 h-4 mr-2" />
                 <span>Launch</span>
               </CommandItem>
             </CommandGroup>
             <CommandSeparator />
             <CommandGroup heading="Settings">
               <CommandItem>
-                <PersonIcon className="mr-2 h-4 w-4" />
+                <PersonIcon className="w-4 h-4 mr-2" />
                 <span>Profile</span>
                 <CommandShortcut>⌘P</CommandShortcut>
               </CommandItem>
               <CommandItem>
-                <EnvelopeClosedIcon className="mr-2 h-4 w-4" />
+                <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
                 <span>Mail</span>
                 <CommandShortcut>⌘B</CommandShortcut>
               </CommandItem>
               <CommandItem>
-                <GearIcon className="mr-2 h-4 w-4" />
+                <GearIcon className="w-4 h-4 mr-2" />
                 <span>Settings</span>
                 <CommandShortcut>⌘S</CommandShortcut>
               </CommandItem>
@@ -107,14 +104,14 @@ const Items = () => {
         {/* ===== Top Heading ===== */}
         <LayoutHeader>
           <Search />
-          <div className="ml-auto flex items-center space-x-4">
+          <div className="flex items-center ml-auto space-x-4">
             <ThemeSwitch />
             <UserNav />
           </div>
         </LayoutHeader>
 
         <LayoutBody className="flex flex-col" fixedHeight>
-          <div className="mb-2 flex items-center justify-between space-y-2">
+          <div className="flex items-center justify-between mb-2 space-y-2">
             <div>
               <h2 className="text-2xl font-bold tracking-tight">
                 Welcome back!
@@ -124,7 +121,7 @@ const Items = () => {
               </p>
             </div>
           </div>
-          <div className="-mx-4 flex-1 overflow-auto px-4 py-1 lg:flex-row lg:space-x-12 lg:space-y-0">
+          <div className="flex-1 px-4 py-1 -mx-4 overflow-auto lg:flex-row lg:space-x-12 lg:space-y-0">
             <DataTable data={tasks} columns={columns} />
           </div>
         </LayoutBody>

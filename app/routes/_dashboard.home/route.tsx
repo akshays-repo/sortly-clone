@@ -33,13 +33,15 @@ const Home = () => {
     <Layout>
       <LayoutHeader>
         <TopNav links={topNav} />
-        <div className="ml-auto flex items-center space-x-4">
+        <div className="flex items-center ml-auto space-x-4">
           <Search />
           <ThemeSwitch />
           <UserNav />
         </div>
       </LayoutHeader>
-      <LayoutBody className="space-y-4"></LayoutBody>
+      <LayoutBody className="space-y-4">
+        {/* Body goes here */}
+      </LayoutBody>
     </Layout>
   );
 };
