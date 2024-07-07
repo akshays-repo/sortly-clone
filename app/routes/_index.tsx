@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import { redirect, type MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  return {};
+  return redirect("/home");
 }
 export default function Index() {
   return (
